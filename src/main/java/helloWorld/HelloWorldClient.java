@@ -3,7 +3,7 @@ package helloWorld;
 import java.net.URL;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
-import helloWorld.HelloWorld;
+
 
 /* This example does not use wsimport. Instead, it
 creates a service instance manually. */

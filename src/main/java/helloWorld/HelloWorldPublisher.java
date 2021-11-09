@@ -1,7 +1,6 @@
 package helloWorld;
 
 import javax.xml.ws.Endpoint;
-import helloWorld.HelloWorldImpl;
  
 //Endpoint publisher
 public class HelloWorldPublisher{
