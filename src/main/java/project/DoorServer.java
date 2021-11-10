@@ -7,7 +7,7 @@ import java.sql.Array;
 public class DoorServer implements DataGetter {
     /*Insert functions to handle sensors, they can be whatever and return whatever we want*/
     public Door receptionDoor = new Door(0,"open");
-    public Door intoOfficeDoor = new Door(1, "closed but not locked");
+    public Door intoOfficeDoor = new Door(1, "open");
 
     public Door[] doorArray = {receptionDoor, intoOfficeDoor};
     @Override
@@ -18,9 +18,21 @@ public class DoorServer implements DataGetter {
         {
             if(doorArray[i].id == id)
             {
-                output += "Door " + doorArray[i].id + " is " + doorArray[i].state;
+                output += "Door is " + doorArray[i].state;
             }
         }
+
         return output;
+    }
+
+    @Override
+    public void setStatus(String status, int id){
+        for(int i = 0; i < doorArray.length; i++)
+        {
+            if(doorArray[i].id == id)
+            {
+                doorArray[i].state = status;
+            }
+        }
     }
 }

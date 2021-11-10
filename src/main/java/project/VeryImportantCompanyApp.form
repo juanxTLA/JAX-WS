@@ -1,50 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="project.VeryImportantCompanyApp">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="4" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="8" column-count="13" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="653" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <component id="3dde8" class="javax.swing.JRadioButton" binding="receptionToRoomRadioButton" default-binding="true">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <selected value="false"/>
           <text value="Reception to Room"/>
         </properties>
       </component>
-      <hspacer id="dcf7e">
-        <constraints>
-          <grid row="0" column="1" row-span="4" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-      </hspacer>
       <component id="9d1d" class="javax.swing.JRadioButton" binding="entryRadioButton" default-binding="true">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <selected value="false"/>
           <text value="Entry"/>
         </properties>
       </component>
-      <component id="804bc" class="javax.swing.JLabel">
+      <component id="804bc" class="javax.swing.JLabel" binding="doorLabel">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="2" col-span="9" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Doors"/>
         </properties>
       </component>
-      <component id="1304e" class="javax.swing.JLabel" binding="windowStatus">
+      <component id="1304e" class="javax.swing.JLabel" binding="doorStatus">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="0" row-span="4" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Label"/>
+          <text value="Door Status:"/>
+        </properties>
+      </component>
+      <component id="6aed9" class="javax.swing.JComboBox" binding="entryStatus">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="8" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="open"/>
+            <item value="closed and locked"/>
+            <item value="closed but not locked"/>
+          </model>
+        </properties>
+      </component>
+      <component id="e5712" class="javax.swing.JComboBox" binding="recToRoomStatus">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="7" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="open"/>
+            <item value="closed and locked"/>
+            <item value="closed but not locked"/>
+          </model>
+        </properties>
+      </component>
+      <component id="28fb1" class="javax.swing.JLabel" binding="windowLabel">
+        <constraints>
+          <grid row="0" column="11" row-span="2" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Windows"/>
+        </properties>
+      </component>
+      <component id="154eb" class="javax.swing.JRadioButton" binding="window1Button">
+        <constraints>
+          <grid row="2" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Window 1"/>
+        </properties>
+      </component>
+      <component id="c7f68" class="javax.swing.JRadioButton" binding="window2Button">
+        <constraints>
+          <grid row="3" column="12" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Window 2"/>
+        </properties>
+      </component>
+      <component id="47efc" class="javax.swing.JComboBox" binding="window1State">
+        <constraints>
+          <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="open"/>
+            <item value="half open"/>
+            <item value="closed"/>
+            <item value="closed and locked"/>
+          </model>
+        </properties>
+      </component>
+      <component id="57acf" class="javax.swing.JComboBox" binding="window2State">
+        <constraints>
+          <grid row="3" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="open"/>
+            <item value="half open"/>
+            <item value="closed"/>
+            <item value="closed and locked"/>
+          </model>
+        </properties>
+      </component>
+      <hspacer id="24546">
+        <constraints>
+          <grid row="2" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="bdd60">
+        <constraints>
+          <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="f81bb">
+        <constraints>
+          <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="219c3" class="javax.swing.JButton" binding="updateButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="5" row-span="4" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Update"/>
+        </properties>
+      </component>
+      <component id="ae90b" class="javax.swing.JLabel" binding="windowStatus">
+        <constraints>
+          <grid row="4" column="10" row-span="4" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Window Status:"/>
         </properties>
       </component>
     </children>
   </grid>
+  <buttonGroups>
+    <group name="doorGroup">
+      <member id="9d1d"/>
+      <member id="9d1d"/>
+      <member id="3dde8"/>
+    </group>
+    <group name="windowGroup">
+      <member id="154eb"/>
+      <member id="c7f68"/>
+    </group>
+  </buttonGroups>
 </form>

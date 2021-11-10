@@ -8,4 +8,5 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface DataGetter {
     @WebMethod String displayStatus(int id);
+    @WebMethod void setStatus(String status, int id);
 }
